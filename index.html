@@ -3,9 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="author" content="Fabian Andres Lopez Magnan">
+    <meta name="description" content="Portafolio de proyectos de Fabian Andres Lopez Magnan, programador.">
+    <title>Portafolio</title>
+    <!--     CSS     -->
+    <link rel="stylesheet" href="./css/css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!--  BOOTSTRAP  -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!--     JS      -->
+    <script>
+        window.onload = function() {
+        function establecerEstilo() {
+            var elemento = document.getElementById("inicio1");
+            elemento.style.color = "var(--main-color)";
+            window.scrollTo("smooth", 0);
+        }
+            establecerEstilo();
+        };
+    </script>
 </head>
 <body>
+    <!--CONTENIDO DE HEADER-->
+    <header id="header" style="background-image: url('img/2.png')">
+        <div id="inicio">
+            <p class="titulo-inicial"><span id="t1">Hola soy</span> <span id="name">Fabián López Magnan</span>
+                <span id="t2">y soy desarrollador.</span>
+            </p>
+            <button id="btn-inicial" type="button" onclick="miTrabajo()" class="boton">Mi trabajo</button>
+        </div>
+    </header>
+    <!--FIN CONTENIDO DE HEADER-->
+
+
+    <!-- CONTENIDO NAVEGADOR -->
+    <nav id="navegador" class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid">
+            <a id="inicio1" class="nav-link inicio-link" onclick="inicio()" aria-current="page">
+                <i class="fas fa-home"></i> INICIO
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link trabajo-link" aria-current="page" onclick="miTrabajo()">Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link proyectos-link" onclick="proyectos()">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link contacto-link" onclick="contacto()">Contacto</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Idioma
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#"><img class="bandera" src="img/icons/4x3/es.svg" alt="Bandera español"> Español</a></li>
+                            <li><a class="dropdown-item" href="#"><img class="bandera" src="img/icons/4x3/gb.svg" alt="Bandera inglés"> Inglés</a></li>
+                            <li><a class="dropdown-item" href="#"><img class="bandera" src="img/icons/4x3/fr.svg" alt="Bandera francés"> Francés</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div id="toggle-theme" class="toggle-theme">
+                    <p id="toggle-text" class="toggle-theme__text">
+                        <img id="toggle-icon" src="./img/icons/moon.png" alt="Icon theme" class="toggle-theme__ic"><span
+                            id="texto-toggle">Modo Oscuro</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!--FIN CONTENIDO NAVEGADOR -->
+
+    <!--CONTENIDO DE PAGINA-->
+    <main>
+        <section>
+            <h1>Hola</h1>
+        </section>
+        <section>
+            <h1>Hola</h1>
+        </section>
+    </main>
+    <!--FIN CONTENIDO DE PAGINA-->
+
+
+
+    <!--CONTENIDO DE FOOTER-->
+    <footer>
+        <div class="container">
+            <div class="text-center">
+                <h4 id="titulo-contacto-footer">Contacto</h4>
+                <p><span id="footer-fono">Teléfono:</span> +569 300 900 86
+                    <br><span id="footer-email">Correo electrónico:</span> fabianlopezmagnan@gmail.com
+                </p>
+            </div>
+            <div class="row center" style="padding:20px;">
+                <h4 id="id-social-title" class="text-center">Redes sociales</h4>
+                <div class="col-sm-4 left" id="github-footer">
+                    <p>
+                        <a class="dropdown-item" target="_blank" href="https://github.com/Efelante-Volador">
+                            <img class="social-icon" src="img/icons/4x3/github.png" alt="Instagram">Github/ FabianLopezMagnan
+                        </a>
+                        <span id="footer-git">Sigue mis proyectos en Github.</span>
+                    </p>
+                </div><!-- Github -->
+                <div class="col-sm-4 left" id="linkedin-footer">
+                    <p>
+                        <a class="dropdown-item" target="_blank" href="https://www.linkedin.com/in/fabi%C3%A1n-andr%C3%A9s-l%C3%B3pez-magnan-a1358b177/">
+                            <img class="social-icon" src="img/icons/4x3/lk.png" alt="Instagram">Linkedin
+                        </a>
+                        <span id="footer-lk">Puedes conectar conmigo por Linkedin.</span>
+                    </p>
+                </div><!-- Linkedin -->
+                <div class="col-sm-4 left" id="instagram-footer">
+                    <p>
+                        <a class="dropdown-item" target="_blank" href="https://www.instagram.com/efelante_volador/">
+                            <img class="social-icon" src="img/icons/4x3/ig.png" alt="Instagram">Instagram/ @efelante_volador
+                        </a>
+                        <span id="footer-ig">Conoce más de mi vida y hobbies.</span>
+                    </p>
+                </div><!-- Instagram -->
+            </div><!-- Cierre redes sociales-->
+        </div><!-- Cierre div container-->
+        <p id="copyright" class="text-center">
+            Copyright &copy; 2024 Fabián López Magnan - <span id="footer-copyright">Todos los derechos reservados.</span>
+        </p>
+    </footer>
+    <!--FIN CONTENIDO DE FOOTER-->
+    <script src="./js/navScroll.js"></script>
+    <script src="./js/darkmode.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
     
 </body>
 </html>
