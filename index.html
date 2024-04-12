@@ -25,16 +25,21 @@
 </head>
 <body>
     <!--CONTENIDO DE HEADER-->
-    <header id="header" style="background-image: url('img/2.png')">
+    <header id="header" style="background-image: url('img/3.png')">
         <div id="inicio">
             <p class="titulo-inicial"><span id="t1">Hola soy</span> <span id="name">Fabián López Magnan</span>
                 <span id="t2">y soy desarrollador.</span>
             </p>
-            <button id="btn-inicial" type="button" onclick="miTrabajo()" class="boton">Mi trabajo</button>
+            <button id="btn-inicial" type="button" onclick="miTrabajo()" class="boton">Mas sobre mi</button>
         </div>
-    </header>
-    <!--FIN CONTENIDO DE HEADER-->
+    </header><!--FIN CONTENIDO DE HEADER-->
 
+    <div id="toggle-theme" class="toggle-theme">
+        <p id="toggle-text" class="toggle-theme__text">
+            <img id="toggle-icon" src="./img/icons/moon.png" alt="Icon theme" class="toggle-theme__ic"><span
+                id="texto-toggle">Modo Oscuro</span>
+        </p>
+    </div>
 
     <!-- CONTENIDO NAVEGADOR -->
     <nav id="navegador" class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -46,15 +51,15 @@
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item" style="margin-left:30px;">
                         <a class="nav-link trabajo-link" aria-current="page" onclick="miTrabajo()">Perfil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link proyectos-link" onclick="proyectos()">Proyectos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link contacto-link" onclick="contacto()">Contacto</a>
+                        <a class="nav-link contacto-link" onclick="certificados()">Certificados</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -67,33 +72,92 @@
                         </ul>
                     </li>
                 </ul>
-                <div id="toggle-theme" class="toggle-theme">
-                    <p id="toggle-text" class="toggle-theme__text">
-                        <img id="toggle-icon" src="./img/icons/moon.png" alt="Icon theme" class="toggle-theme__ic"><span
-                            id="texto-toggle">Modo Oscuro</span>
-                    </p>
-                </div>
             </div>
         </div>
-    </nav>
-    
-    <!--FIN CONTENIDO NAVEGADOR -->
+    </nav><!--FIN CONTENIDO NAVEGADOR -->
 
     <!--CONTENIDO DE PAGINA-->
     <main>
-        <section>
-            <h1>Hola</h1>
-        </section>
-        <section>
-            <h1>Hola</h1>
-        </section>
-    </main>
-    <!--FIN CONTENIDO DE PAGINA-->
+        <div id="div-perfil" class="container-fluid" style="display:none;">
+            <section>
+                <h1>Perfil</h1>
+                <article id="articulo-perfil-datos" class="container-fluid">
+                    <div id="div-perfil" class="container-fluid">
+                        <div id="items" class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-3 item-border">
+                                <img class="social-icon" src="img/icons/fast.png" alt="faster icon">
+                                <h4>
+                                    <span id="caption1">Rápido</span>
+                                </h4>
+                                <p>
+                                    <span id="cap1">Me caracterizo por un enfoque altamente eficiente en mis proyectos, buscando optimizar cada aspecto para lograr resultados de alta calidad en un tiempo adecuado. Si bien valoro la rapidez, priorizo la eficiencia sin descuidar el tiempo.</span>
+                                </p>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-3 item-border">
+                                <img class="social-icon" src="img/icons/creative.png" alt="creative icon">
+                                <h4>
+                                    <span id="caption1">Intuitivo</span>
+                                </h4>
+                                <p>
+                                    <span id="cap2">Me considero un desarrollador intuitivo. Disfruto encontrar soluciones creativas y efectivas, confiando en mi intuición para abordar los desafíos del desarrollo. Creo que esta habilidad me permite crear experiencias únicas y eficientes para los usuarios en mis proyectos.</span>
+                                </p>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-3 item-border">
+                                <img class="social-icon" src="img/icons/responsive.png" alt="responsive icon">
+                                <h4>
+                                    <span id="caption1">Adaptativo</span>
+                                </h4>
+                                <p>
+                                    <span id="cap3">Destaco por mi gran capacidad de adaptabilidad, siempre dispuesto a aprender y enfrentar nuevos desafíos. Mi flexibilidad ante los cambios se refleja en mi habilidad para crear sitios web responsivos. Constantemente busco mejorar mis habilidades y aprender nuevas tecnologías para ofrecer resultados de alta calidad en mis proyectos.</span>
+                                </p>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-3 item-border">
+                                <img class="social-icon" src="img/icons/dynamic.png" alt="Dynamic icon">
+                                <h4>
+                                    <span id="caption1">Dinámico</span>
+                                </h4>
+                                <p>
+                                    <span id="cap4">Como desarrollador, me destaco por mi enfoque dinámico. Siempre busco innovar y adaptar mis proyectos para crear experiencias interactivas y fluidas. Mi objetivo es ir más allá de lo estático, ofreciendo a los usuarios una experiencia envolvente y personalizada en cada interacción.</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article id="articulo-perfil-foto" class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6 div-foto">
+                            <img id="mifoto" src="./img/fabo.jpg" class="img-thumbnail" alt="...">
+                            <h4 id="question">¿Quién es este chico?</h4>
+                            <p id="question-text">Soy Fabian tengo 26 años, soy Ingeniero en Informática. Vivo en Santiago de Chile
+                            (Maipú), ¿Mis Hobbies? La
+                            magia, la música, el baloncesto, el café.
+                            </p>
+                            <a href="docs/CV - Fabian Andres Lopez Magnan.pdf" download="CV - Fabian Andres Lopez Magnan.pdf">
+                            <img class="pdf-icon" src="./img/icons/pdf.png" alt="icono pdf"><span id="dowload-cv">Descargar
+                            CV</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+        </div>
+        <div id="div-proyectos" class="container-fluid" style="display:none;">
+            <section>
+                <h1>PROYECTOS</h1>
+            </section>
+        </div>
+        <div id="div-certificados" class="container-fluid" style="display:none;">
+            <section>
+                <h1>CERTIFICADOS</h1>
+            </section>
+        </div>
+    </main><!--FIN CONTENIDO DE PAGINA-->
 
 
 
     <!--CONTENIDO DE FOOTER-->
-    <footer>
+    <footer id="footer" style="display:none;">
         <div class="container">
             <div class="text-center">
                 <h4 id="titulo-contacto-footer">Contacto</h4>
@@ -130,11 +194,12 @@
             </div><!-- Cierre redes sociales-->
         </div><!-- Cierre div container-->
         <p id="copyright" class="text-center">
-            Copyright &copy; 2024 Fabián López Magnan - <span id="footer-copyright">Todos los derechos reservados.</span>
+            Copyright &copy; 2024 Fabián Andres López Magnan - <span id="footer-copyright">Todos los derechos reservados.</span>
         </p>
-    </footer>
-    <!--FIN CONTENIDO DE FOOTER-->
-    <script src="./js/navScroll.js"></script>
+    </footer><!--FIN CONTENIDO DE FOOTER-->
+
+    
+    <script src="./js/navegacion.js"></script>
     <script src="./js/darkmode.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
     

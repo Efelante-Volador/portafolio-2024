@@ -6,15 +6,15 @@ const navbarNav = document.getElementById("navbarNav");
 
 toggleTheme.addEventListener("click", () => {
   if (toggleIcon.src.includes("moon.png")) {
-    header.style.backgroundImage = "url('img/3.png')";
+    header.style.backgroundImage = "url('img/2.png')";
     toggleIcon.src = '../img/icons/sun.png'
-    toggleText.textContent = 'Modo Claro';
+    toggleText.textContent = 'Light Mode';
     localStorage.setItem("toggle", "dark");
     document.body.classList.add("dark");
   } else {
-    header.style.backgroundImage = "url('img/2.png')";
+    header.style.backgroundImage = "url('img/3.png')";
     toggleIcon.src = '../img/icons/moon.png'
-    toggleText.textContent = 'Modo Oscuro';
+    toggleText.textContent = 'Dark Mode';
     localStorage.setItem("toggle", "light");
     document.body.classList.remove("dark");
   }
